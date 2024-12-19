@@ -32,7 +32,7 @@ const UpdateContacts = () => {
         const fetchData = async () => {
 
           try {
-            const response = await axios.get(`https://talents-backend2.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`);
+            const response = await axios.get(`http://localhost:8085/apis/employees/contacts/contacts/${contactId}`);
             console.log(response.data);
             setFormData(response.data);
 
@@ -55,7 +55,7 @@ const UpdateContacts = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         setIsAdding(true);
-        await axios.put(`https://talents-backend2.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`, formData);
+        await axios.put(`http://localhost:8085t/apis/employees/contacts/contacts/${contactId}`, formData);
         setIsAdding(false);
         navigate(`/ContactsDetails/${contactId}`)
     };

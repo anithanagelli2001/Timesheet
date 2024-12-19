@@ -15,7 +15,7 @@ const Contacts=()=>{
         const fetchData = async () => {
             const email=localStorage.getItem('email');
           try {
-            const response = await axios.get(`https://talents-backend2.azurewebsites.net/apis/employees/contacts/contactsCreated/${email}`);
+            const response = await axios.get(`http://localhost:8085/apis/employees/contacts/contactsCreated/${email}`);
             console.log(response.data);
             setContacts(response.data);
             setLoading(true)

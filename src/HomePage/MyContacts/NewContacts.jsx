@@ -38,7 +38,7 @@ const NewContacts = () => {
         if(formData.personName!=="" && formData.personMobile!==""){
             setIsError(false);
             setIsAdding(true);
-        await axios.post("https://talents-backend2.azurewebsites.net//apis/employees/contacts/contacts", formData);
+        await axios.post("http://localhost:8085//apis/employees/contacts/contacts", formData);
         setIsAdding(false);
         setShowPopup(true);
         }
